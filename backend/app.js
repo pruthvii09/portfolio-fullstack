@@ -15,9 +15,10 @@ app.use(cookieParser());
 import userRoutes from "./routes/user.routes.js";
 import projectRoutes from "./routes/project.routes.js";
 import blogRoutes from "./routes/blog.routes.js";
+import serverless from "serverless-http";
 //routes declaration
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/projects", projectRoutes);
 app.use("/api/v1/blogs", blogRoutes);
-
 export { app };
+export const handler = serverless(app);

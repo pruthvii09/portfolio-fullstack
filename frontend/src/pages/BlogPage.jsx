@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../style/blogpage.css";
 import { useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
+import Error from "../components/Error/Error";
+import Loader from "../components/Loader/Loader";
 const BlogPage = () => {
   const { id } = useParams();
   const [blogData, setBlogData] = useState(null);
@@ -13,7 +15,7 @@ const BlogPage = () => {
       try {
         // Fetch data for the specified username
         const response = await fetch(
-          `${import.meta.env.VITE_NODE_API}/api/v1/blogs/${id}`
+          `${import.meta.env.VITE_NODE_API}/blogs/${id}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch data");
@@ -33,11 +35,11 @@ const BlogPage = () => {
     fetchData();
   }, [id]);
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <Error />;
   }
   return (
     <div className="blog__container">
