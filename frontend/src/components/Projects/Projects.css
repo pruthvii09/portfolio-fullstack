@@ -1,0 +1,118 @@
+.projects__container {
+  grid-template-columns: repeat(3, 350px);
+  column-gap: 3rem;
+  justify-content: center;
+}
+.projects {
+  margin-bottom: 3rem;
+}
+
+.projects__content {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
+
+.projects__title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  text-align: start;
+  margin-bottom: 1.5rem;
+}
+
+.projects__group {
+  display: grid;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+.projects__ref {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.projects__ref a {
+  font-size: 20px;
+  color: var(--title-color-dark);
+}
+.projects__data {
+  display: flex;
+  column-gap: 0.5rem;
+}
+
+.projects .bx-badge-check {
+  font-size: 1rem;
+  color: black;
+}
+
+.projects__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 18px;
+}
+
+.projects__level {
+  font-size: 12px;
+}
+.not_found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.not_found p {
+  font-weight: bold;
+  font-size: 20px;
+}
+.not_found img {
+  width: 20rem;
+}
+/* ===================   BreakPoints   ================ */
+
+/* For Larger devices */
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+
+  .button {
+    padding: 1rem 1.75rem;
+    margin-bottom: 2rem;
+  }
+  .projects {
+    margin-top: 1rem;
+  }
+
+  .button__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects__container {
+    grid-template-columns: max-content;
+    row-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .projects__container {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__content {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .projects__box {
+    column-gap: 1.25rem;
+  }
+
+  .projects__name {
+    font-size: var(--small-font-size);
+  }
+}

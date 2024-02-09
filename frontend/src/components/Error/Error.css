@@ -1,0 +1,35 @@
+.page_404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+}
+.page_404 svg {
+  height: 40px;
+  width: 40px;
+  color: #3b82f6;
+}
+.btn_404 {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.btn_404 a {
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.btn_go {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: white;
+  border: 1px solid rgb(219, 219, 219);
+}
+.btn_home {
+  background-color: #3b82f6;
+  color: white;
+}
