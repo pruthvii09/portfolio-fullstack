@@ -81,7 +81,7 @@ export const getProfile = asyncHandler(async (req, res) => {
 });
 export const updateProfile = asyncHandler(async (req, res) => {
   try {
-    const { name, email, username, title, github, linkedin, img, desc } =
+    const { name, email, username, title, github, linkedin, img, desc, pdf } =
       req.body;
     const updateFields = {
       name,
@@ -92,6 +92,7 @@ export const updateProfile = asyncHandler(async (req, res) => {
       "social.linkedin": linkedin,
       img,
       desc,
+      pdf,
     };
     await User.findOneAndUpdate(
       { _id: req.user._id }, // Filter by user ID

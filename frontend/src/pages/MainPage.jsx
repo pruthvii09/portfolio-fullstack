@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import Home from "../components/Home/Home";
 import Projects from "../components/Projects/Projects";
 import Blogs from "../components/Blogs/Blogs";
@@ -8,7 +9,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Loader from "../components/Loader/Loader";
 import Error from "../components/Error/Error";
+import { setUser } from "../redux/userSlice";
 const MainPage = () => {
+  const dispatch = useDispatch();
   const { username } = useParams();
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -27,6 +30,7 @@ const MainPage = () => {
           }
           const responseData = await response.json();
           setUserData(responseData);
+          dispatch(setUser(responseData));
         } else {
           const response = await fetch(
             `${import.meta.env.VITE_NODE_API}/users/sample`
@@ -36,6 +40,7 @@ const MainPage = () => {
           }
           const responseData = await response.json();
           setUserData(responseData);
+          dispatch(setUser(responseData));
         }
       } catch (error) {
         setError(error);
@@ -55,9 +60,9 @@ const MainPage = () => {
   }
   return (
     <main className="main">
-      <Home user={userData?.user} />
-      <Projects projects={userData?.projects} />
-      <Blogs username={username} blogs={userData?.blogs} />
+      <Home />
+      <Projects />
+      <Blogs />
       <Footer />
     </main>
   );

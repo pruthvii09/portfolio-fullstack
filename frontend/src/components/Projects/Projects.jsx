@@ -2,7 +2,11 @@ import React from "react";
 import "./Projects.css";
 import NotFoundImg from "../../assets/not-found.svg";
 import Project from "./Project";
-const Skills = ({ projects }) => {
+import { useSelector } from "react-redux";
+const Skills = () => {
+  const { user } = useSelector((store) => store.user);
+  console.log(user);
+  const projects = user?.projects;
   return (
     <section className="projects section" id="projects">
       <h2 className="section__title">My Projects</h2>

@@ -2,7 +2,11 @@ import React from "react";
 import "./Blog.css";
 import NotFoundImg from "../../assets/not-found.svg";
 import Blog from "./Blog";
-const Skills = ({ blogs, username }) => {
+import { useSelector } from "react-redux";
+const Skills = () => {
+  const { user } = useSelector((store) => store.user);
+  const blogs = user?.blogs;
+  const username = user?.user?.username;
   return (
     <section className="blogs section" id="blogs">
       <h2 className="section__title">My blogs</h2>

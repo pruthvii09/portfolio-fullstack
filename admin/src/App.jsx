@@ -1,6 +1,4 @@
 import "./App.css";
-import "./init.js";
-import Navbar from "./components/Navbar";
 import AddBlog from "./pages/AddBlog";
 import Blogs from "./pages/Blogs";
 import EditProfile from "./pages/EditProfile";
@@ -15,7 +13,6 @@ import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <div className="font-customFont dark:bg-gray-900">
-      {/* {location.pathname !== "/dashboard" && <Navbar />} */}
       <Routes>
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/" element={<LoginPage />} />

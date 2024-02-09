@@ -31,17 +31,15 @@ const userModel = new Schema({
     type: String,
     required: true,
   },
+  pdf: {
+    type: String,
+    default: "",
+  },
   social: {
     github: {
       type: String,
     },
     linkedin: {
-      type: String,
-    },
-    twitter: {
-      type: String,
-    },
-    peerlist: {
       type: String,
     },
   },
