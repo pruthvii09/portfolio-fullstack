@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import Error from "../components/Error/Error";
 import Loader from "../components/Loader/Loader";
+import Docker from "../assets/docker.png";
 const BlogPage = () => {
   const { id } = useParams();
   const [blogData, setBlogData] = useState(null);
@@ -43,10 +44,11 @@ const BlogPage = () => {
   }
   return (
     <div className="blog__container">
-      <div>
+      <div className="blog__head">
         <h1>{blogData?.title}</h1>
         <p> {format(parseISO(blogData?.createdAt), "MMMM dd, yyyy")}</p>
       </div>
+      {/* <img src={Docker} alt="" /> */}
       <div
         className="blog__desc"
         dangerouslySetInnerHTML={{ __html: blogData?.desc }}
