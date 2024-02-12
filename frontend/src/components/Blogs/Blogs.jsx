@@ -25,6 +25,11 @@ const Skills = () => {
           <p>No Blogs Found</p>
         </div>
       )}
+      {/* {blogs?.length > 0 && (
+        <a href={`/${username}/blogs`} className="all_blogs">
+          View All
+        </a>
+      )} */}
     </section>
   );
 };

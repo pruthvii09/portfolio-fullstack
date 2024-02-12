@@ -25,6 +25,7 @@ const Skills = () => {
           <p>No Blogs Found</p>
         </div>
       )}
+      {/* {projects?.length > 0 && <a className="all_projects">View All</a>} */}
     </section>
   );
 };

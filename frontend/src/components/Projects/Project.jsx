@@ -7,12 +7,16 @@ const Project = ({ project }) => {
       <div className="projects__box">
         <p>{project.desc}</p>
         <div className="projects__ref">
-          <a href="">
-            <i className="bx bxl-github"></i>
-          </a>
-          <a href="">
-            <i className="bx bx-link-alt"></i>
-          </a>
+          {project?.github && (
+            <a href={project?.github} target="_blank">
+              <i className="bx bxl-github"></i>
+            </a>
+          )}
+          {project?.liveLink && (
+            <a href={project?.liveLink} target="_blank">
+              <i className="bx bx-link-alt"></i>
+            </a>
+          )}
         </div>
       </div>
     </div>

@@ -24,6 +24,12 @@ pre {
   overflow-x: scroll;
   overflow-y: hidden; /* Hide vertical scrollbar */
 }
+.all_blogs {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: rgb(48, 48, 255);
+}
 
 /* Hide scrollbar for WebKit browsers */
 pre::-webkit-scrollbar {

@@ -4,6 +4,7 @@
   justify-content: center;
 }
 .projects {
+  padding: 0 3rem;
   margin-bottom: 3rem;
 }
 
@@ -66,6 +67,11 @@
 }
 .not_found img {
   width: 20rem;
+}
+.all_projects {
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 /* ===================   BreakPoints   ================ */
 

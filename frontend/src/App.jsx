@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import BlogPage from "./pages/BlogPage";
+import AllBlogs from "./pages/AllBlogsPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route element={<MainPage />} path="/" />
         <Route element={<MainPage />} path="/:username" />
         <Route element={<BlogPage />} path="/:username/blog/:id" />
+        <Route element={<AllBlogs />} path="/:username/blog" />
       </Routes>
     </>
   );
