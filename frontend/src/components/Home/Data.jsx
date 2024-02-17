@@ -57,7 +57,7 @@ const Data = ({ user }) => {
       </h1>
       <h3 className="home__subtitle">{user?.title}</h3>
       <p className="home__description">{user?.desc}</p>
-      <a href="#contact" className="button | button--flex">
+      <a href="#projects" className="button | button--flex">
         See Projects
         <svg
           className="button__icon"

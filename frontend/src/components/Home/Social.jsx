@@ -10,13 +10,15 @@ const Social = ({ user }) => {
       >
         <i className="bx bxl-gmail"></i>
       </a>
-      <a
-        href={user?.social?.linkedin}
-        className="home__social-icon"
-        target="_blank"
-      >
-        <i className="bx bxl-linkedin-square"></i>
-      </a>
+      {user?.social?.linkedin && (
+        <a
+          href={user?.social?.linkedin}
+          className="home__social-icon"
+          target="_blank"
+        >
+          <i className="bx bxl-linkedin-square"></i>
+        </a>
+      )}
       <a
         href={`https://github.com/${user?.social?.github}`}
         className="home__social-icon"

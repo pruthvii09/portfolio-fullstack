@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import Loader from "../components/Loader/Loader";
 import Error from "../components/Error/Error";
 import { setUser } from "../redux/userSlice";
+import Github from "../components/Github/Github";
 const MainPage = () => {
   const dispatch = useDispatch();
   const { username } = useParams();
@@ -61,6 +62,7 @@ const MainPage = () => {
   return (
     <main className="main">
       <Home />
+      <Github />
       <Projects />
       <Blogs />
       <Footer />
