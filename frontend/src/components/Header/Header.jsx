@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import { Menu, XCircle } from "lucide-react";
 import { useSelector } from "react-redux";
+import Logo from "../../assets/logo.png";
 const Header = () => {
   const [Toggle, showMenu] = useState(false);
   const { user } = useSelector((store) => store.user);
@@ -10,6 +11,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav container">
         <a href="/" className="nav__logo">
+          <img src={Logo} alt="" />
           Portfolio
         </a>
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>

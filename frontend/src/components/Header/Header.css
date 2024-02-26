@@ -69,8 +69,13 @@
   color: var(--title-color);
   font-weight: var(--font-medium);
   /* display: none; */
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-
+.nav__logo img {
+  width: 45px;
+}
 .nav__list {
   display: flex;
   column-gap: 2rem;
