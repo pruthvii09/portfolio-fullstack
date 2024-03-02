@@ -102,6 +102,9 @@
   .blogs__container {
     grid-template-columns: 1fr;
   }
+  .blogs {
+    padding: 0 0;
+  }
 
   .blogs__content {
     padding: 1.5rem;

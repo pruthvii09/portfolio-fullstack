@@ -107,6 +107,9 @@
   .projects__container {
     grid-template-columns: 1fr;
   }
+  .projects {
+    padding: 0 0;
+  }
 
   .projects__content {
     padding: 1.5rem;
